@@ -10,11 +10,11 @@ private int presupuesto;
 private int NumTropas;
 private int NumNaves;
 //Constructor
-public Ejercito(String sede, int nºTropas, int nºNaves,int dia,int mes,int annio) {
+public Ejercito(String sede, int numTropas, int numNaves,int dia,int mes,int annio) {
 	super();
 	this.sede = sede;
-	this.NumTropas = nºTropas;
-	this.NumNaves = nºNaves;
+	this.NumTropas = numTropas;
+	this.NumNaves = numNaves;
 	Calendar Fecha1=Calendar.getInstance();
 	Fecha1.set(annio, (mes-1),dia);
 	this.fechaFundacion=Fecha1.getTime();
@@ -39,17 +39,17 @@ public int getPresupuesto() {
 public void setPresupuesto(int presupuesto) {
 	this.presupuesto = presupuesto;
 }
-public int getNºTropas() {
+public int getNumTropas() {
 	return NumTropas;
 }
-public void setNºTropas(int nºTropas) {
-	this.NumTropas = nºTropas;
+public void setNºTropas(int numTropas) {
+	this.NumTropas = numTropas;
 }
-public int getNºNaves() {
+public int getNumNaves() {
 	return NumNaves;
 }
-public void setNºNaves(int nºNaves) {
-	this.NumNaves = nºNaves;
+public void setNumNaves(int numNaves) {
+	this.NumNaves = numNaves;
 }
 
 }
