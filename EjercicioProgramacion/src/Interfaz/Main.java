@@ -2,11 +2,15 @@ package Interfaz;
 
 import java.awt.Frame;
 
+import javax.swing.JOptionPane;
+
 public class Main {
 	
 	public static void main(String[] args) {
 		
 		Marco m1 = new Marco();
+		
+		JOptionPane.showConfirmDialog(m1, m1) ;
 		
 		m1.setVisible(true);
 		//m1.setSize(500, 300);
