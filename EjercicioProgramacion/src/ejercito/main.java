@@ -9,6 +9,7 @@ public class main {
 		
 		ArrayList<Armada>armadas=new ArrayList<Armada>();
 		ArrayList<Aire>aires=new ArrayList<Aire>();
+		ArrayList<Tierra>tierra=new ArrayList<Tierra>();
 
 	}
 
