@@ -17,6 +17,7 @@ public class Main {
 		//m1.setBounds(200, 200, 200, 200);
 		
 		
+		
 	}
 	
 

@@ -3,6 +3,7 @@ package Interfaz;
 
 import java.awt.Dimension;
 import java.awt.Font;
+import java.awt.Frame;
 import java.awt.Image;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
@@ -17,6 +18,7 @@ public class Marco extends JFrame {
 	private JPanel panel;
 	private JLabel etiqueta;
 	private JButton img1, img2, img3;
+	private boolean tier = false, air = false, arm= false;
 	
 	public Marco() {
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -99,13 +101,12 @@ public class Marco extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				
+				mTierra t1 = new mTierra();		
+				t1.setVisible(true);
+				t1.setTitle("Ejército de Tierra");
+				t1.setResizable(false);
+				t1.setExtendedState(Frame.MAXIMIZED_BOTH);
 					
-				if (e.getSource()==img1) {
-					JOptionPane.showMessageDialog(
-							   null,
-							   "Tierra");
-					
-					}
 			}
 				
 				
@@ -117,13 +118,14 @@ public class Marco extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				
+				mAire a1 = new mAire();		
+				a1.setVisible(true);
+				a1.setTitle("Ejército de Tierra");
+				a1.setResizable(false);
+				a1.setExtendedState(Frame.MAXIMIZED_BOTH);
+				
 					
-				if (e.getSource()==img2) {
-					JOptionPane.showMessageDialog(
-							   null,
-							   "Aire");
 					
-					}
 			}
 				
 				
@@ -135,13 +137,14 @@ public class Marco extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				
+			
+				mArmada ar1 = new mArmada();		
+				ar1.setVisible(true);
+				ar1.setTitle("Ejército de Tierra");
+				ar1.setResizable(false);
+				ar1.setExtendedState(Frame.MAXIMIZED_BOTH);
 					
-				if (e.getSource()==img3) {
-					JOptionPane.showMessageDialog(
-							   null,
-							   "Armada");
 					
-					}
 			}
 				
 				
@@ -153,6 +156,8 @@ public class Marco extends JFrame {
 		
 		
 	}
+	
+	
 	
 	
 	
