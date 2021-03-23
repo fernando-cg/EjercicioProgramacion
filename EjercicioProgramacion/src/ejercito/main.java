@@ -14,6 +14,8 @@ public class main {
 		ArrayList<VehiculosArmada>vehiculosarmada=new ArrayList<VehiculosArmada>();
 		ArrayList<TropasAire>tropasaire=new ArrayList<TropasAire>();
 		ArrayList<VehiculosAire>vehiculosaire=new ArrayList<VehiculosAire>();
+		ArrayList<TropasTierra>Tropastierra=new ArrayList<TropasTierra>();
+		ArrayList<VehiculosTierra>vehiculostierra=new ArrayList<VehiculosTierra>();
 		
 		Armada arm1=new Armada("Comandancia Naval de Sevilla","", 20838, 203, 17, 2, 1915);
 		Aire air1=new Aire("Cuartel General del Ejército del Aire", "Madrid", 20900, 412, 28,2, 1913);
