@@ -2,8 +2,8 @@ package ejercito;
 
 public class VehiculosTierra extends Vehiculo{
 
-	public VehiculosTierra(int cantVehiculos, String tipo, int presupuesto) {
-		super(cantVehiculos, tipo, presupuesto);
+	public VehiculosTierra(int cantVehiculos, String tipo) {
+		super(cantVehiculos, tipo);
 		// TODO Auto-generated constructor stub
 	}
 
