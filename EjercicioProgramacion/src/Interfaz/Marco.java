@@ -6,6 +6,7 @@ import java.awt.Font;
 import java.awt.Image;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.*;
 
@@ -16,7 +17,6 @@ public class Marco extends JFrame {
 	private JPanel panel;
 	private JLabel etiqueta;
 	private JButton img1, img2, img3;
-	private boolean a=false, b=false , c=false;
 	
 	public Marco() {
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -71,7 +71,7 @@ public class Marco extends JFrame {
 		panel.add(etiqueta);
 		
 	}
-	private void colocarElementos() {
+	private void colocarElementos(){
 		img1 = new JButton();
 		ImageIcon imgTierra = new ImageIcon(getClass().getResource("/Imagenes/Tierra.png"));
 		img1.setIcon(new ImageIcon(imgTierra.getImage().getScaledInstance(150,187,Image.SCALE_SMOOTH)));
@@ -94,51 +94,67 @@ public class Marco extends JFrame {
 		img3.setBounds(1180,290,120,216);
 		panel.add(img3);
 		
-		
-		
-		
-	}
-	public void actionPerformed(ActionEvent e) {
-		
-		if (e.getSource()==img1) {
-			a=true;
-			b=false;
-			c=false;
-			
-			}
-		if (e.getSource()==img2) {
-			b=true;
-			a=false;
-			c=false;
-			
-			}
-		if (e.getSource()==img3) {
-			c=true;
-			b=false;
-			a=false;
+		ActionListener eventoClic = new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
 				
+					
+				if (e.getSource()==img1) {
+					JOptionPane.showMessageDialog(
+							   null,
+							   "Tierra");
+					
+					}
 			}
+				
+				
+		};
+		img1.addActionListener(eventoClic);
+		
+		ActionListener eventoClic2 = new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+					
+				if (e.getSource()==img2) {
+					JOptionPane.showMessageDialog(
+							   null,
+							   "Aire");
+					
+					}
+			}
+				
+				
+		};
+		img2.addActionListener(eventoClic2);
+		
+		ActionListener eventoClic3 = new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+					
+				if (e.getSource()==img3) {
+					JOptionPane.showMessageDialog(
+							   null,
+							   "Armada");
+					
+					}
+			}
+				
+				
+		};
+		img3.addActionListener(eventoClic3);
+		
+
+		
+		
+		
+	}
 	
 	
-	}
-	public boolean isA() {
-		return a;
-	}
-	public void setA(boolean a) {
-		this.a = a;
-	}
-	public boolean isB() {
-		return b;
-	}
-	public void setB(boolean b) {
-		this.b = b;
-	}
-	public boolean isC() {
-		return c;
-	}
-	public void setC(boolean c) {
-		this.c = c;
-	}
 	
 
 }
