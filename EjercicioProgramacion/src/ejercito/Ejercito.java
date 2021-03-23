@@ -42,7 +42,7 @@ public void setPresupuesto(int presupuesto) {
 public int getNumTropas() {
 	return NumTropas;
 }
-public void setNºTropas(int numTropas) {
+public void setNumTropas(int numTropas) {
 	this.NumTropas = numTropas;
 }
 public int getNumNaves() {
