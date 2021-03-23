@@ -10,6 +10,8 @@ public class Main {
 		
 		Marco m1 = new Marco();
 		
+		JOptionPane.showConfirmDialog(m1, m1) ;
+		
 		m1.setVisible(true);
 		//m1.setSize(500, 300);
 		m1.setTitle("Ejército de España");
