@@ -1,6 +1,6 @@
 package ejercito;
 
-public class Vehiculo {
+public abstract class Vehiculo {
 private int cantVehiculos;
 private String Tipo;
 private int Presupuesto;
