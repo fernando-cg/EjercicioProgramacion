@@ -4,14 +4,16 @@ import java.util.Calendar;
 import java.util.Date;
 
 public abstract class Ejercito {
+private String NombreBase;
 private  Date fechaFundacion;
 private String sede;
 private int presupuesto;
 private int NumTropas;
 private int NumNaves;
 //Constructor
-public Ejercito(String sede, int numTropas, int numNaves,int dia,int mes,int annio) {
+public Ejercito(String NombreBase,String sede, int numTropas, int numNaves,int dia,int mes,int annio) {
 	super();
+	this.NombreBase=NombreBase;
 	this.sede = sede;
 	this.NumTropas = numTropas;
 	this.NumNaves = numNaves;
