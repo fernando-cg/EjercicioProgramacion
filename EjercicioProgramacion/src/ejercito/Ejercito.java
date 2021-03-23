@@ -10,6 +10,7 @@ private String sede;
 private int presupuesto;
 private int NumTropas;
 private int NumNaves;
+
 //Constructor
 public Ejercito(String NombreBase,String sede, int numTropas, int numNaves,int dia,int mes,int annio) {
 	super();
