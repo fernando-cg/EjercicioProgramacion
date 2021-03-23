@@ -5,13 +5,9 @@ import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Image;
 import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
 
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-
+import javax.swing.*;
 
 
 @SuppressWarnings("serial")
@@ -20,6 +16,7 @@ public class Marco extends JFrame {
 	private JPanel panel;
 	private JLabel etiqueta;
 	private JButton img1, img2, img3;
+	private boolean a=false, b=false , c=false;
 	
 	public Marco() {
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -83,6 +80,8 @@ public class Marco extends JFrame {
 		
 		
 		
+		
+		
 		img2 = new JButton ();
 		ImageIcon imgAire = new ImageIcon(getClass().getResource("/Imagenes/Aire.png"));
 		img2.setIcon(new ImageIcon(imgAire.getImage().getScaledInstance(300,131,Image.SCALE_SMOOTH)));
@@ -99,5 +98,47 @@ public class Marco extends JFrame {
 		
 		
 	}
+	public void actionPerformed(ActionEvent e) {
+		
+		if (e.getSource()==img1) {
+			a=true;
+			b=false;
+			c=false;
+			
+			}
+		if (e.getSource()==img2) {
+			b=true;
+			a=false;
+			c=false;
+			
+			}
+		if (e.getSource()==img3) {
+			c=true;
+			b=false;
+			a=false;
+				
+			}
+	
+	
+	}
+	public boolean isA() {
+		return a;
+	}
+	public void setA(boolean a) {
+		this.a = a;
+	}
+	public boolean isB() {
+		return b;
+	}
+	public void setB(boolean b) {
+		this.b = b;
+	}
+	public boolean isC() {
+		return c;
+	}
+	public void setC(boolean c) {
+		this.c = c;
+	}
+	
 
 }
