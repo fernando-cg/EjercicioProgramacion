@@ -1,11 +1,11 @@
 package ejercito;
 
-public class Vehiculos {
+public class Vehiculo {
 private int cantVehiculos;
 private String Tipo;
 private int Presupuesto;
 //Constructor
-public Vehiculos(int cantVehiculos, String tipo, int presupuesto) {
+public Vehiculo(int cantVehiculos, String tipo, int presupuesto) {
 	super();
 	this.cantVehiculos = cantVehiculos;
 	Tipo = tipo;
