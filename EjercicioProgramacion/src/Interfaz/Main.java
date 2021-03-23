@@ -10,7 +10,7 @@ public class Main {
 		
 		m1.setVisible(true);
 		//m1.setSize(500, 300);
-		m1.setTitle("Ejercito de España");
+		m1.setTitle("Ejército de España");
 		m1.setResizable(false);
 		m1.setExtendedState(Frame.MAXIMIZED_BOTH);
 		//m1.setLocation(200, 200);

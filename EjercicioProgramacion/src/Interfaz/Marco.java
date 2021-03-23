@@ -6,21 +6,20 @@ import java.awt.Font;
 import java.awt.Image;
 import java.awt.Toolkit;
 
-import javax.swing.ButtonGroup;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JRadioButton;
 
 
+
+@SuppressWarnings("serial")
 public class Marco extends JFrame {
 	
 	private JPanel panel;
 	private JLabel etiqueta;
-	private JRadioButton rb1, rb2, rb3;
-	private JButton bt1,img1, img2, img3;
+	private JButton img1, img2, img3;
 	
 	public Marco() {
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -50,8 +49,8 @@ public class Marco extends JFrame {
 		
 	}
 	private void colocarEtiqueta() {
-		etiqueta = new JLabel("Escoja el ejercito que quiere ver");
-		etiqueta.setBounds(560, 10, 300, 100);
+		etiqueta = new JLabel("Escoja el ejército que quiere ver");
+		etiqueta.setBounds(580, 10, 300, 100);
 		
 		etiqueta.setFont(new Font("Arial", 0, 20));
 		panel.add(etiqueta);
@@ -96,48 +95,9 @@ public class Marco extends JFrame {
 		img3.setBounds(1180,290,120,216);
 		panel.add(img3);
 		
-		ButtonGroup grupo = new ButtonGroup();
-			grupo.add(rb1);
-			grupo.add(rb2);
-			grupo.add(rb3);
-			eventoClic();
-		
-		bt1 = new JButton("Siguiente");
-		bt1.setBounds(690, 600, 80, 40);
-		panel.add(bt1);
 		
 		
 		
-	}
-	public void eventoClic() {
-		
-		
-		
-		
-		
-		/*img1 = new JLabel();
-		img1.setBounds(100,300,150,187);
-		panel.add(img1);
-		
-		img2 = new JLabel();
-		img2.setBounds(580,300,300,131);
-		panel.add(img2);
-		
-		img3 = new JLabel();
-		img3.setBounds(1180,280,120,216);
-		panel.add(img3);
-		
-		
-		ImageIcon imgTierra = new ImageIcon(getClass().getResource("/Imagenes/Tierra.png"));
-		ImageIcon imgAire = new ImageIcon(getClass().getResource("/Imagenes/Aire.png"));
-		ImageIcon imgArmada = new ImageIcon(getClass().getResource("/Imagenes/Armada.png"));
-		
-		img1.setIcon(new ImageIcon(imgTierra.getImage().getScaledInstance(img1.getWidth(), img1.getHeight(),Image.SCALE_SMOOTH)));
-		img2.setIcon(new ImageIcon(imgAire.getImage().getScaledInstance(img2.getWidth(), img2.getHeight(),Image.SCALE_SMOOTH)));
-		img3.setIcon(new ImageIcon(imgArmada.getImage().getScaledInstance(img3.getWidth(), img3.getHeight(),Image.SCALE_SMOOTH)));*/
-
-
-
 	}
 
 }
