@@ -7,10 +7,9 @@ public class Tropa {
 	private String rango;
 	private String base;
 	
-	public Tropa(int cantTropas, int cantPresupuesto, String rango, String base) {
+	public Tropa(int cantTropas,  String rango, String base) {
 		super();
 		this.cantTropas = cantTropas;
-		this.cantPresupuesto = cantPresupuesto;
 		this.rango = rango;
 		this.base = base;
 	}

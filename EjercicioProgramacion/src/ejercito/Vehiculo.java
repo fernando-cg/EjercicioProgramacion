@@ -5,11 +5,11 @@ private int cantVehiculos;
 private String Tipo;
 private int Presupuesto;
 //Constructor
-public Vehiculo(int cantVehiculos, String tipo, int presupuesto) {
+public Vehiculo(int cantVehiculos, String tipo) {
 	super();
 	this.cantVehiculos = cantVehiculos;
 	Tipo = tipo;
-	Presupuesto = presupuesto;
+	
 }
 //Getters y setters
 public int getCantVehiculos() {
