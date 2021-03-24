@@ -17,10 +17,9 @@ import javax.swing.JPanel;
 
 import javax.swing.JTextField;
 
+@SuppressWarnings("serial")
 public class mTierra extends JFrame{
-	//Tengo que hacer el extends de JFrame
 	
-	//atributos
 	private JPanel panel;
 	private JLabel etiqueta, fondo, imagen;
 	private JButton bt1, bt2;

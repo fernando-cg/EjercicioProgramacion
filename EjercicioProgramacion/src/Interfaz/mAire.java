@@ -17,6 +17,7 @@ import javax.swing.JPanel;
 
 import javax.swing.JTextField;
 
+@SuppressWarnings("serial")
 public class mAire extends JFrame{
 	private JPanel panel;
 	private JLabel etiqueta, fondo, imagen;
