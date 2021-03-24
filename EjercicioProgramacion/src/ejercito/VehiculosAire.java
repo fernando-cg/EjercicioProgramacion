@@ -9,7 +9,7 @@ public class VehiculosAire extends Vehiculo {
 	
 	@Override
 	public String toString() {
-		return "VehiculosAire Cantidad=" + getCantVehiculos() + "|Tipo" + getTipo()
+		return "VehiculosAire Cantidad: " + getCantVehiculos() + "|Tipo" + getTipo()
 				+ "|Presupuesto=" + getPresupuesto();
 	}
 

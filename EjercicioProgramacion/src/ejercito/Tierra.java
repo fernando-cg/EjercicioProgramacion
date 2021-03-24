@@ -17,7 +17,7 @@ public class Tierra extends Ejercito {
 	@Override
 	public String toString() {
 		SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyy");
-		return "Tierra Id=" + Id + "|Nombre de la base: "+getNombreBase()+"|Lugar de la sede: "+getSede()+"|Número de tropas: "+getNumTropas()+"|Número de naves: "+getNumNaves() +"|Fecha de fundación de la Armada: "+formatter.format(getFechaFundacion());
+		return "Tierra Id=" + Id + "|Nombre de la base: "+getNombreBase()+"|Lugar de la sede: "+getSede()+"|Número de tropas: "+getNumTropas()+"|Número de naves: "+getNumNaves() +"|Fecha de fundación de la Armada:  "+formatter.format(getFechaFundacion());
 	}
 	
 }

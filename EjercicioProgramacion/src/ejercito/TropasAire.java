@@ -9,7 +9,7 @@ public class TropasAire extends Tropa {
 	
 	@Override
 	public String toString() {
-		return "TropasAire Cantidad de tropas=" + getCantTropas() + "| Presupuesto" + getCantPresupuesto()
+		return "TropasAire Cantidad de tropas=" + getCantTropas() + "| Presupuesto: " + getCantPresupuesto()
 				+ "|Rango: " + getRango() + "|Base: " + getBase();
 	}
 
