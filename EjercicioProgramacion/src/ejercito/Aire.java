@@ -1,5 +1,7 @@
 package ejercito;
 
+import java.text.SimpleDateFormat;
+
 public class Aire extends Ejercito{
 	
 	private int Id;
@@ -11,6 +13,17 @@ public class Aire extends Ejercito{
 		Id=IdSigiente;
 		IdSigiente++;
 	}
+
+	@Override
+	public String toString() {
+		SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyy");
+		return "Armada Id=" + Id + "|Nombre de la base: "+getNombreBase()+"|Lugar de la sede: "+getSede()+"|Número de tropas: "+getNumTropas()+"|Número de naves: "+getNumNaves() +"|Fecha de fundación de la Armada: "+formatter.format(getFechaFundacion());
+	}
+	
+	
+	
+	
+	
 	
 	
 	
