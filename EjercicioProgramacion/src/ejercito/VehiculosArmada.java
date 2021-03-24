@@ -7,4 +7,12 @@ public class VehiculosArmada extends Vehiculo {
 		// TODO Auto-generated constructor stub
 	}
 
+	@Override
+	public String toString() {
+		return "VehiculosArmada Cantidad=" + getCantVehiculos() + "|Tipo" + getTipo()
+				+ "|Presupuesto=" + getPresupuesto();
+	}
+	
+	
+
 }
