@@ -7,4 +7,13 @@ public class TropasTierra extends Tropa {
 		// TODO Auto-generated constructor stub
 	}
 
+	@Override
+	public String toString() {
+		return "TropasTierra Cantidad de tropas: " + getCantTropas() + "| Presupuesto" + getCantPresupuesto()
+				+ "|Rango: " + getRango() + "|Base: " + getBase();
+	}
+
+	
+	
+
 }
