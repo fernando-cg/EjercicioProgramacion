@@ -55,4 +55,19 @@ public void setNumNaves(int numNaves) {
 	this.NumNaves = numNaves;
 }
 
+
+public String getNombreBase() {
+	return NombreBase;
+}
+public void setNombreBase(String nombreBase) {
+	NombreBase = nombreBase;
+}
+@Override
+public String toString() {
+	return "Ejercito [NombreBase=" + NombreBase + ", fechaFundacion=" + fechaFundacion + ", sede=" + sede
+			+ ", presupuesto=" + presupuesto + ", NumTropas=" + NumTropas + ", NumNaves=" + NumNaves + "]";
+}
+
+
+
 }
