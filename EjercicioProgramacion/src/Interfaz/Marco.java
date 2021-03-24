@@ -1,6 +1,7 @@
 package Interfaz;
 
 
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Frame;
@@ -16,18 +17,17 @@ import javax.swing.*;
 public class Marco extends JFrame {
 	
 	private JPanel panel;
-	private JLabel etiqueta;
+	private JLabel etiqueta, fondo;
 	private JButton img1, img2, img3;
-	private boolean tier = false, air = false, arm= false;
+	Toolkit monitor = Toolkit.getDefaultToolkit();
+	Dimension tamanio=monitor.getScreenSize();
+	int alturaM = tamanio.width;
+	int anchuraM= tamanio.height;
+	
 	
 	public Marco() {
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setSize(200,200);
-		
-		Toolkit monitor = Toolkit.getDefaultToolkit();
-		Dimension tamanio=monitor.getScreenSize();
-		int alturaM = tamanio.width;
-		int anchuraM= tamanio.height;
 		
 		setSize(anchuraM/2, alturaM/2);
 		setLocation(anchuraM/4, alturaM/4);
@@ -36,8 +36,12 @@ public class Marco extends JFrame {
 	}
 	private void iniciarComponentes() {
 		colocarPanel();
+		
+		
 		colocarEtiqueta();
 		colocarElementos();
+		colocarFondo();
+		
 		
 	}
 	private void colocarPanel() {
@@ -47,38 +51,53 @@ public class Marco extends JFrame {
 		this.add(panel);
 		
 	}
+	
+	private void colocarFondo() {
+		fondo = new JLabel ();
+		ImageIcon img1 = new ImageIcon(getClass().getResource("/Imagenes/fondo.png"));
+		fondo.setIcon(new ImageIcon(img1.getImage().getScaledInstance(anchuraM*2,alturaM,Image.SCALE_SMOOTH)));
+		fondo.setBounds(0,0,anchuraM*2,alturaM);
+		panel.add(fondo);
+	}
 	private void colocarEtiqueta() {
 		etiqueta = new JLabel("Escoja el ejército que quiere ver");
-		etiqueta.setBounds(580, 10, 300, 100);
+		etiqueta.setBounds((anchuraM/2)+ anchuraM/8, alturaM/50, 400, 100);
 		
-		etiqueta.setFont(new Font("Arial", 0, 20));
+		etiqueta.setFont(new Font("Arial", 1, 20));
+		etiqueta.setForeground(Color.WHITE);
 		panel.add(etiqueta);
 		
 		etiqueta = new JLabel("Tierra");
-		etiqueta.setBounds(145, 200, 300, 100);
+		etiqueta.setBounds(((anchuraM/8)+ anchuraM/7)+ anchuraM/14,230, 300, 100);
 		
-		etiqueta.setFont(new Font("Arial", 0, 20));
+		etiqueta.setFont(new Font("Arial", 2, 20));
+		etiqueta.setForeground(Color.WHITE);
 		panel.add(etiqueta);
 		
 		etiqueta = new JLabel("Aire");
-		etiqueta.setBounds(710, 200, 300, 100);
+		etiqueta.setBounds(((anchuraM/2)+ anchuraM/7)+ anchuraM/7,alturaM/5, 300, 100);
 		
-		etiqueta.setFont(new Font("Arial", 0, 20));
+		etiqueta.setFont(new Font("Arial", 2, 20));
+		etiqueta.setForeground(Color.WHITE);
 		panel.add(etiqueta);
 		
 		etiqueta = new JLabel("Armada");
-		etiqueta.setBounds(1205, 200, 300, 100);
+		etiqueta.setBounds(((anchuraM)+ anchuraM/7)+ anchuraM/20,230, 300, 100);
 		
 		etiqueta.setFont(new Font("Arial", 0, 20));
+		etiqueta.setForeground(Color.WHITE);
 		panel.add(etiqueta);
 		
 	}
 	private void colocarElementos(){
 		img1 = new JButton();
 		ImageIcon imgTierra = new ImageIcon(getClass().getResource("/Imagenes/Tierra.png"));
-		img1.setIcon(new ImageIcon(imgTierra.getImage().getScaledInstance(150,187,Image.SCALE_SMOOTH)));
+		img1.setIcon(new ImageIcon(imgTierra.getImage().getScaledInstance(anchuraM/5,alturaM/5,Image.SCALE_SMOOTH)));
+		img1.setOpaque(false);
+		img1.setContentAreaFilled(false);
+		img1.setBorderPainted(false);
 		panel.add(img1);
-		img1.setBounds(100,300,150,187);
+		img1.setBounds((anchuraM/8)+ anchuraM/7,alturaM/5,anchuraM/5,alturaM/5);
 		
 		
 		
@@ -86,14 +105,20 @@ public class Marco extends JFrame {
 		
 		img2 = new JButton ();
 		ImageIcon imgAire = new ImageIcon(getClass().getResource("/Imagenes/Aire.png"));
-		img2.setIcon(new ImageIcon(imgAire.getImage().getScaledInstance(300,131,Image.SCALE_SMOOTH)));
-		img2.setBounds(580,300,300,131);
+		img2.setIcon(new ImageIcon(imgAire.getImage().getScaledInstance(anchuraM/3,alturaM/9,Image.SCALE_SMOOTH)));
+		img2.setBounds((anchuraM/2)+ anchuraM/7,alturaM/4,anchuraM/3,alturaM/9);
+		img2.setOpaque(false);
+		img2.setContentAreaFilled(false);
+		img2.setBorderPainted(false);
 		panel.add(img2);
 		
 		img3 = new JButton();
 		ImageIcon imgArmada = new ImageIcon(getClass().getResource("/Imagenes/Armada.png"));
-		img3.setIcon(new ImageIcon(imgArmada.getImage().getScaledInstance(120,216,Image.SCALE_SMOOTH)));
-		img3.setBounds(1180,290,120,216);
+		img3.setIcon(new ImageIcon(imgArmada.getImage().getScaledInstance(anchuraM/6,alturaM/5,Image.SCALE_SMOOTH)));
+		img3.setBounds((anchuraM)+ anchuraM/7,alturaM/5,anchuraM/6,alturaM/5);
+		img3.setOpaque(false);
+		img3.setContentAreaFilled(false);
+		img3.setBorderPainted(false);
 		panel.add(img3);
 		
 		ActionListener eventoClic = new ActionListener() {
@@ -120,7 +145,7 @@ public class Marco extends JFrame {
 				
 				mAire a1 = new mAire();		
 				a1.setVisible(true);
-				a1.setTitle("Ejército de Tierra");
+				a1.setTitle("Ejército de Aire");
 				a1.setResizable(false);
 				a1.setExtendedState(Frame.MAXIMIZED_BOTH);
 				
@@ -140,7 +165,7 @@ public class Marco extends JFrame {
 			
 				mArmada ar1 = new mArmada();		
 				ar1.setVisible(true);
-				ar1.setTitle("Ejército de Tierra");
+				ar1.setTitle("Armada");
 				ar1.setResizable(false);
 				ar1.setExtendedState(Frame.MAXIMIZED_BOTH);
 					
@@ -150,6 +175,7 @@ public class Marco extends JFrame {
 				
 		};
 		img3.addActionListener(eventoClic3);
+		
 		
 
 		
