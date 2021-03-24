@@ -19,11 +19,23 @@ public class main {
 		
 		Armada arm1=new Armada("Comandancia Naval de Sevilla","", 20838, 203, 17, 2, 1915);
 		Aire air1=new Aire("Cuartel General del Ejército del Aire", "Madrid", 20900, 412, 28,2, 1913);
-		Tierra tier1=new Tierra("Cuartel General de l Ejército de Tierra","Madrid",80000,132,1,1,1767);
-		TropasArmada ta1=new TropasArmada(22000, null, null);
-		VehiculosArmada a1=new VehiculosArmada(0, null);
-		TropasAire tair1=new TropasAire(0, null, null);
-		VehiculosAire va1=new VehiculosAire(0, null);
+		Tierra tier1=new Tierra("Cuartel General de l  Ejército de Tierra","Madrid",80000,132,1,1,1767);
+		
+
+				TropasTierra tt1=new TropasTierra(10000, "Oficiales", "Cuartel General	del Ejercito de Tierra");
+
+				VehiculosTierra vt1=new VehiculosTierra(219, "Leopardo 2E");
+
+				TropasArmada ta1=new TropasArmada(8400, "Oficiales", "Comandancia Naval de Sevilla");
+
+				VehiculosArmada a1= new VehiculosArmada(5, "Fragatas");
+
+				TropasAire tair1= new TropasAire(9500, "Oficiales", "Base Aerea de Moron");
+
+				VehiculosAire va1=new VehiculosAire(73, "Eurofighter Typhoon");
+
+
+		
 	}
 
 }
