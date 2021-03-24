@@ -18,7 +18,7 @@ public class Marco extends JFrame {
 	
 	private JPanel panel;
 	private JLabel etiqueta, fondo;
-	private JButton img1, img2, img3;
+	private JButton img1, img2, img3, bt2;
 	Toolkit monitor = Toolkit.getDefaultToolkit();
 	Dimension tamanio=monitor.getScreenSize();
 	int alturaM = tamanio.width;
@@ -175,6 +175,22 @@ public class Marco extends JFrame {
 				
 		};
 		img3.addActionListener(eventoClic3);
+		bt2 = new JButton("Salir");
+		panel.add(bt2);
+		bt2.setBounds((int) ((anchuraM/2)+ anchuraM/4.45),alturaM/2, 140, 40);
+		
+		ActionListener eventoClic4 = new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				System.exit(0);
+					
+			}
+				
+				
+		};
+		bt2.addActionListener(eventoClic4);
 		
 		
 
