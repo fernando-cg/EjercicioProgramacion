@@ -75,14 +75,14 @@ public class Marco extends JFrame {
 		panel.add(etiqueta);
 		
 		etiqueta = new JLabel("Aire");
-		etiqueta.setBounds(((anchuraM/2)+ anchuraM/7)+ anchuraM/7,alturaM/5, 300, 100);
+		etiqueta.setBounds((int) (((anchuraM/2)+ anchuraM/7)+ anchuraM/6.8),alturaM/5, 300, 100);
 		
 		etiqueta.setFont(new Font("Arial", 2, 20));
 		etiqueta.setForeground(Color.WHITE);
 		panel.add(etiqueta);
 		
 		etiqueta = new JLabel("Armada");
-		etiqueta.setBounds(((anchuraM)+ anchuraM/7)+ anchuraM/20,230, 300, 100);
+		etiqueta.setBounds(((anchuraM)+ anchuraM/7)+ anchuraM/23,230, 300, 100);
 		
 		etiqueta.setFont(new Font("Arial", 0, 20));
 		etiqueta.setForeground(Color.WHITE);
