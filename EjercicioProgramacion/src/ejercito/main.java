@@ -1,11 +1,13 @@
 package ejercito;
 
 import java.util.ArrayList;
+import escritura.Editor ;
 
 public class main {
 
 	public static void main(String[] args) {
 		
+		//arraylist
 		ArrayList<Armada>armadas=new ArrayList<Armada>();
 		ArrayList<Aire>aires=new ArrayList<Aire>();
 		ArrayList<Tierra>tierras=new ArrayList<Tierra>();
@@ -15,6 +17,18 @@ public class main {
 		ArrayList<VehiculosAire>vehiculosaire=new ArrayList<VehiculosAire>();
 		ArrayList<TropasTierra>Tropastierra=new ArrayList<TropasTierra>();
 		ArrayList<VehiculosTierra>vehiculostierra=new ArrayList<VehiculosTierra>();
+		
+		//editor
+		Editor aire = new Editor("/Users/fernando_cg/Desktop/datos/Aire.txt") ; 
+		Editor armada = new Editor("/Users/fernando_cg/Desktop/datos/Armada.txt") ;
+		Editor tierra = new Editor("/Users/fernando_cg/Desktop/datos/Tierra.txt") ;
+		Editor tropasAire = new Editor("/Users/fernando_cg/Desktop/datos/TropasAire.txt") ;
+		Editor tropasArmada = new Editor("/Users/fernando_cg/Desktop/datos/TropasArmada.txt") ;
+		Editor tropasTierra = new Editor("/Users/fernando_cg/Desktop/datos/TropasTierra.txt") ;
+		Editor usuarios = new Editor("/Users/fernando_cg/Desktop/datos/Usuarios.txt") ;
+		Editor vehiculosAire = new Editor("/Users/fernando_cg/Desktop/datos/VehiculosAire.txt") ;
+		Editor vehiculosArmada = new Editor("/Users/fernando_cg/Desktop/datos/VehiculosArmada.txt") ;
+		Editor vehiculosTierra = new Editor("/Users/fernando_cg/Desktop/datos/VehiculosTierra.txt") ;
 		
 		Armada arm1=new Armada("Comandancia Naval de Sevilla","", 20838, 203, 17, 2, 1915);
 		Aire air1=new Aire("Cuartel General del Ejército del Aire", "Madrid", 20900, 412, 28,2, 1913);
