@@ -18,10 +18,11 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 @SuppressWarnings("serial")
-public class mArmada extends JFrame{
+public class Juego extends JFrame{
+	
 	private JPanel panel;
-	private JLabel etiqueta, fondo, imagen;
-	private JButton bt1, bt2, egg;
+	private JLabel etiqueta, fondo, tabl;
+	private JButton bt1, bt2;
 	private JTextField tb1, tb2;
 	Toolkit monitor = Toolkit.getDefaultToolkit();
 	Dimension tamanio=monitor.getScreenSize();
@@ -29,12 +30,12 @@ public class mArmada extends JFrame{
 	int anchuraM= tamanio.height;
 	
 	
-	public mArmada() {
+	public Juego() {
 	
 	
 		setVisible(true);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		
+		setTitle("Hola soy el titulito");
 		
 		
 		Toolkit monitor = Toolkit.getDefaultToolkit();
@@ -65,6 +66,12 @@ public class mArmada extends JFrame{
 		fondo.setIcon(new ImageIcon(img1.getImage().getScaledInstance(anchuraM*2,alturaM,Image.SCALE_SMOOTH)));
 		fondo.setBounds(0,0,anchuraM*2,alturaM);
 		panel.add(fondo);
+		
+		tabl = new JLabel ();
+		ImageIcon img2 = new ImageIcon(getClass().getResource("/Imagenes/mar.png"));
+		tabl.setIcon(new ImageIcon(img2.getImage().getScaledInstance(anchuraM*2,alturaM,Image.SCALE_SMOOTH)));
+		tabl.setBounds(0,0,anchuraM*2,alturaM);
+		panel.add(tabl);
 	}
 	
 	private void colocarPanel() {
@@ -74,8 +81,8 @@ public class mArmada extends JFrame{
 	}
 	
 	private void colocarEtiqueta() {
-		etiqueta = new JLabel("Armada");
-		etiqueta.setBounds((int) ((anchuraM/2)+ anchuraM/3.8),10,300,40);
+		etiqueta = new JLabel("Hundir la flota");
+		etiqueta.setBounds((int) ((anchuraM/2)+ anchuraM/4.5),10,300,40);
 		etiqueta.setFont(new Font("Arial", 1, 20));
 		etiqueta.setForeground(Color.WHITE);
 		panel.add(etiqueta);
@@ -83,38 +90,6 @@ public class mArmada extends JFrame{
 	}
 	
 	private void colocarElementos() {
-		
-		etiqueta = new JLabel("Login");
-		etiqueta.setBounds((int) ((anchuraM/2)+ anchuraM/3.7),(int) (alturaM/3.2),300,40);
-		etiqueta.setFont(new Font("Arial", 1, 20));
-		etiqueta.setForeground(Color.WHITE);
-		panel.add(etiqueta);
-		
-		imagen = new JLabel();
-		ImageIcon imgTierra = new ImageIcon(getClass().getResource("/Imagenes/Armada.png"));
-		imagen.setIcon(new ImageIcon(imgTierra.getImage().getScaledInstance(anchuraM/6,alturaM/5,Image.SCALE_SMOOTH)));
-		panel.add(imagen);
-		imagen.setBounds((int) ((anchuraM/2)+ anchuraM/4.55),alturaM/9,anchuraM/6,alturaM/5);
-		
-		tb1 = new JTextField("Usuario");
-		panel.add(tb1);
-		tb1.setBounds((int) ((anchuraM/2)+ anchuraM/4.7),alturaM/3, 160, 40);
-		
-		tb2 = new JTextField("Contraseña");
-		panel.add(tb2);
-		tb2.setBounds((int) ((anchuraM/2)+ anchuraM/4.7),(int) (alturaM/2.8), 160, 40);
-		
-		bt1 = new JButton("IR");
-		panel.add(bt1);
-		bt1.setBounds((int) ((anchuraM/2)+ anchuraM/4.45),(int) (alturaM/2.5), 140, 40);
-		
-		bt2 = new JButton("ATRAS");
-		panel.add(bt2);
-		bt2.setBounds((int) ((anchuraM/2)+ anchuraM/4.45),alturaM/2, 140, 40);
-		
-		egg = new JButton("EasterEgg");
-		panel.add(egg);
-		egg.setBounds((int) ((anchuraM/2)+ anchuraM/4.45),(int) (alturaM/2.25), 140, 40);
 		
 		ActionListener eventoClic1 = new ActionListener() {
 
@@ -165,8 +140,6 @@ public class mArmada extends JFrame{
 		};
 		egg.addActionListener(eventoClic2);
 		
-
-		
 	}
 	
 
@@ -174,4 +147,3 @@ public class mArmada extends JFrame{
 	
 	
 }
-
