@@ -4,8 +4,9 @@ public abstract class Vehiculo {
 private int cantVehiculos;
 private String Tipo;
 private int Presupuesto;
+private String descripcion;
 //Constructor
-public Vehiculo(int cantVehiculos, String tipo) {
+public Vehiculo(int cantVehiculos, String tipo,String descripcion) {
 	super();
 	this.cantVehiculos = cantVehiculos;
 	Tipo = tipo;
@@ -30,5 +31,13 @@ public int getPresupuesto() {
 public void setPresupuesto(int presupuesto) {
 	Presupuesto = presupuesto;
 }
+public String getDescripcion() {
+	return descripcion;
+}
+public void setDescripcion(String descripcion) {
+	this.descripcion = descripcion;
+}
+
+
 
 }

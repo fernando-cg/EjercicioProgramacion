@@ -2,15 +2,15 @@ package ejercito;
 
 public class VehiculosTierra extends Vehiculo{
 
-	public VehiculosTierra(int cantVehiculos, String tipo) {
-		super(cantVehiculos, tipo);
+	public VehiculosTierra(int cantVehiculos, String tipo,String descripcion) {
+		super(cantVehiculos, tipo,descripcion);
 		// TODO Auto-generated constructor stub
 	}
 	
 	@Override
 	public String toString() {
-		return "VehiculosArmada Cantidad: " + getCantVehiculos() + "|Tipo" + getTipo()
-				+ "|Presupuesto=" + getPresupuesto();
+		return "VehiculosAire Cantidad: " + getCantVehiculos() + "|Tipo" + getTipo()
+				+ "|Presupuesto=" + getPresupuesto()+"|Descripción del vehículo: "+getDescripcion();
 	}
 
 }
