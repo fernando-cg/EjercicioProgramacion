@@ -36,12 +36,6 @@ public class mArmada extends JFrame{
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		
 		
-		
-		Toolkit monitor = Toolkit.getDefaultToolkit();
-		Dimension tamanio=monitor.getScreenSize();
-		int alturaM = tamanio.height;
-		int anchuraM = tamanio.width;
-		
 		setSize(anchuraM/2,alturaM/2);
 		setLocation(anchuraM/4,alturaM/4);
 		
