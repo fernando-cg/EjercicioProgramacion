@@ -57,24 +57,31 @@ public class Editor {
 	
 	public void escribir(String cadena) {
 		
-		String cad = lectura() ;
+		FileReader f = null ;
 		
 		try {
 			
-	        FileWriter myWriter = new FileWriter(directorio);
-	        
-	        myWriter.write(cad + cadena);
-	        myWriter.close();
-        
-    	
-        System.out.println("Escrito");
-        
-      } catch(IOException e) {
-    	  
-        System.out.println("Error");
-        
-        e.printStackTrace();
-      }
+			f = new FileReader(directorio);
+			
+		} catch (FileNotFoundException e) {
+			
+			e.printStackTrace();
+			
+		}
+		
+		try {
+			
+			BufferedWriter escribir = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(directorio,true), "utf-8"));
+		
+			escribir.write(cadena);
+			
+			escribir.close();
+		} catch (IOException e) {
+			
+			e.printStackTrace();
+			System.out.println("Error");
+		}
+			
 	    
 		
 	}
