@@ -1,8 +1,11 @@
 package ejercito;
 
+import java.io.FileNotFoundException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+
+import escritura.*;
 
 public class Armada extends Ejercito {
 
@@ -20,7 +23,10 @@ public class Armada extends Ejercito {
 		cal.set(annio, (mes-1),dia);
 		this.FechaFundacionArmada=cal.getTime();
 		
+		Editor e = new Editor("datos/Armada.txt") ;
 		
+		e.escribir(NombreBase + "\t" + sede + "\t" + numTropas + "\t" + numNaves + "\t" + dia + "\t" + mes + "\t" + annio + "\t" + this.Id + "\t" + this.FechaFundacionArmada);
+	
 	}
 
 	@Override
