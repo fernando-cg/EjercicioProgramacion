@@ -164,4 +164,239 @@ public ArrayList<Aire> actualizarair(ArrayList<Aire> array) {
 		}
 		return array ;
 	}
+
+public ArrayList<Tierra> actualizaratier(ArrayList<Tierra> array) {
+	
+	String linea = null;
+	
+    BufferedReader leerFichero;
+    
+    try {
+    	
+    	leerFichero = new BufferedReader (new FileReader(directorio));
+		while( (linea = leerFichero.readLine()) != null)
+		{
+			
+		   StringTokenizer token = new StringTokenizer(linea, "\t");
+		   
+		   String     nombreBase =  token.nextToken().trim() ;
+		   String  sede =  token.nextToken().trim();
+		   String       numeroTropas =  token.nextToken().trim();
+		   String     numeroNaves =  token.nextToken().trim();
+		   String     dia =  token.nextToken().trim();
+		   String     mes =  token.nextToken().trim();
+		   String     annio =  token.nextToken().trim();
+		  
+		   
+		   int    numTropas2=Integer.parseInt(numeroTropas);
+		   int    numNaves2=Integer.parseInt(numeroNaves);
+		   int    dia2=Integer.parseInt(dia);
+		   int    mes2=Integer.parseInt(mes);
+		   int    annio2=Integer.parseInt(annio);
+		   array.add(new Tierra(nombreBase,sede,numTropas2,numNaves2,dia2,mes2,annio2));
+		   
+		   
+		   }
+	} catch (NumberFormatException | IOException e) {
+		e.printStackTrace();
+	}
+	return array ;
+}
+
+public ArrayList<TropasArmada> actualizartroparm(ArrayList<TropasArmada> array) {
+	
+	String linea = null;
+	
+    BufferedReader leerFichero;
+    
+    try {
+    	
+    	leerFichero = new BufferedReader (new FileReader(directorio));
+		while( (linea = leerFichero.readLine()) != null)
+		{
+			
+		   StringTokenizer token = new StringTokenizer(linea, "\t");
+		   
+		   String     cantTropas =  token.nextToken().trim() ;
+		   String  rango =  token.nextToken().trim();
+		   String       base =  token.nextToken().trim();
+		  
+		  
+		   
+		   int    cantTropas2=Integer.parseInt(cantTropas);
+		   
+		   array.add(new TropasArmada(cantTropas2,rango,base));
+		   
+		   
+		   }
+	} catch (NumberFormatException | IOException e) {
+		e.printStackTrace();
+	}
+	return array ;
+}
+
+public ArrayList<TropasTierra> actualizartropatier(ArrayList<TropasTierra> array) {
+	
+	String linea = null;
+	
+    BufferedReader leerFichero;
+    
+    try {
+    	
+    	leerFichero = new BufferedReader (new FileReader(directorio));
+		while( (linea = leerFichero.readLine()) != null)
+		{
+			
+		   StringTokenizer token = new StringTokenizer(linea, "\t");
+		   
+		   String     cantTropas =  token.nextToken().trim() ;
+		   String  rango =  token.nextToken().trim();
+		   String       base =  token.nextToken().trim();
+		  
+		  
+		   
+		   int    cantTropas2=Integer.parseInt(cantTropas);
+		   
+		   array.add(new TropasTierra(cantTropas2,rango,base));
+		   
+		   
+		   }
+	} catch (NumberFormatException | IOException e) {
+		e.printStackTrace();
+	}
+	return array ;
+}
+
+public ArrayList<TropasAire> actualizartropaair(ArrayList<TropasAire> array) {
+	
+	String linea = null;
+	
+    BufferedReader leerFichero;
+    
+    try {
+    	
+    	leerFichero = new BufferedReader (new FileReader(directorio));
+		while( (linea = leerFichero.readLine()) != null)
+		{
+			
+		   StringTokenizer token = new StringTokenizer(linea, "\t");
+		   
+		   String     cantTropas =  token.nextToken().trim() ;
+		   String  rango =  token.nextToken().trim();
+		   String       base =  token.nextToken().trim();
+		  
+		  
+		   
+		   int    cantTropas2=Integer.parseInt(cantTropas);
+		   
+		   array.add(new TropasAire(cantTropas2,rango,base));
+		   
+		   
+		   }
+	} catch (NumberFormatException | IOException e) {
+		e.printStackTrace();
+	}
+	return array ;
+}
+
+
+
+
+public ArrayList<VehiculosArmada> actualizarvehiarm(ArrayList<VehiculosArmada> array) {
+	
+	String linea = null;
+	
+    BufferedReader leerFichero;
+    
+    try {
+    	
+    	leerFichero = new BufferedReader (new FileReader(directorio));
+		while( (linea = leerFichero.readLine()) != null)
+		{
+			
+		   StringTokenizer token = new StringTokenizer(linea, "\t");
+		   
+		   String     cantVehiculos =  token.nextToken().trim() ;
+		   String  tipo =  token.nextToken().trim();
+		   String       descripcion =  token.nextToken().trim();
+		  
+		  
+		   
+		   int    cantVehiculos2=Integer.parseInt(cantVehiculos);
+		   
+		   array.add(new VehiculosArmada(cantVehiculos2,tipo,descripcion));
+		   
+		   
+		   }
+	} catch (NumberFormatException | IOException e) {
+		e.printStackTrace();
+	}
+	return array ;
+}
+
+public ArrayList<VehiculosAire> actualizarvehiair(ArrayList<VehiculosAire> array) {
+	
+	String linea = null;
+	
+    BufferedReader leerFichero;
+    
+    try {
+    	
+    	leerFichero = new BufferedReader (new FileReader(directorio));
+		while( (linea = leerFichero.readLine()) != null)
+		{
+			
+		   StringTokenizer token = new StringTokenizer(linea, "\t");
+		   
+		   String     cantVehiculos =  token.nextToken().trim() ;
+		   String  tipo =  token.nextToken().trim();
+		   String       descripcion =  token.nextToken().trim();
+		  
+		  
+		   
+		   int    cantVehiculos2=Integer.parseInt(cantVehiculos);
+		   
+		   array.add(new VehiculosAire(cantVehiculos2,tipo,descripcion));
+		   
+		   
+		   }
+	} catch (NumberFormatException | IOException e) {
+		e.printStackTrace();
+	}
+	return array ;
+}
+
+public ArrayList<VehiculosTierra> actualizarvehitier(ArrayList<VehiculosTierra> array) {
+	
+	String linea = null;
+	
+    BufferedReader leerFichero;
+    
+    try {
+    	
+    	leerFichero = new BufferedReader (new FileReader(directorio));
+		while( (linea = leerFichero.readLine()) != null)
+		{
+			
+		   StringTokenizer token = new StringTokenizer(linea, "\t");
+		   
+		   String     cantVehiculos =  token.nextToken().trim() ;
+		   String  tipo =  token.nextToken().trim();
+		   String       descripcion =  token.nextToken().trim();
+		  
+		  
+		   
+		   int    cantVehiculos2=Integer.parseInt(cantVehiculos);
+		   
+		   array.add(new VehiculosTierra(cantVehiculos2,tipo,descripcion));
+		   
+		   
+		   }
+	} catch (NumberFormatException | IOException e) {
+		e.printStackTrace();
+	}
+	return array ;
+}
+
+
 }
