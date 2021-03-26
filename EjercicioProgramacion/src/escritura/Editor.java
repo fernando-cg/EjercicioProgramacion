@@ -398,5 +398,36 @@ public ArrayList<VehiculosTierra> actualizarvehitier(ArrayList<VehiculosTierra> 
 	return array ;
 }
 
+private void eliminarFila(int fila) {
+	
+	ArrayList<String> array = new ArrayList<String>() ;
+	String linea = null;
+	
+    BufferedReader leerFichero;
+    
+    try {
+    	
+    	leerFichero = new BufferedReader (new FileReader(directorio));
+		while( (linea = leerFichero.readLine()) != null)
+		{
+			
+			array.add(linea) ;
+		   
+		   
+		   }
+		
+		array.remove(fila) ;
+		BufferedWriter escribir = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(directorio,true), "utf-8"));
+		BufferedWriter bw = new BufferedWriter(new FileWriter(directorio));
+		bw.write("");
+		for(int x = 0 ; x < array.size() ; x++) {
+			escribir.write(array.get(x)) ;
+		}
+	} catch (NumberFormatException | IOException e) {
+		e.printStackTrace();
+	}
+	
+}
+
 
 }
