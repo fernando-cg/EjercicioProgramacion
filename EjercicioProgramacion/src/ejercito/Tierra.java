@@ -2,6 +2,8 @@ package ejercito;
 
 import java.text.SimpleDateFormat;
 
+import escritura.Editor;
+
 public class Tierra extends Ejercito {
 
 	private int Id;
@@ -12,6 +14,10 @@ public class Tierra extends Ejercito {
 		super(NombreBase, sede, numTropas, numNaves, dia, mes, annio);
 		Id=IdSigiente;
 		IdSigiente++;
+		
+Editor e = new Editor("datos/Tierra.txt") ;
+		
+		e.escribir(NombreBase + "\t" + sede + "\t" + numTropas + "\t" + numNaves + "\t" + dia + "\t" + mes + "\t" + annio + "\t" + this.Id+ "\t"+ getFechaFundacion()+"\r\n");
 	}
 	
 	@Override
