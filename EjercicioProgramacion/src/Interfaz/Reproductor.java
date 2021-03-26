@@ -13,8 +13,10 @@ public class Reproductor {
 	
 	public void AbrirFichero(String ruta) throws Exception{
 		
-		player.open	
+		player.open(new File(ruta));
 		
 	}
+	
+	public void Pausa
 
 }
