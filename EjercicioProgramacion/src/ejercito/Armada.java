@@ -7,7 +7,7 @@ import java.util.Date;
 public class Armada extends Ejercito {
 
 	private int Id;
-	private static int IdSigiente=0;
+	private static int IdSigiente=1;
 	private Date FechaFundacionArmada;
 	
 	//Constructor

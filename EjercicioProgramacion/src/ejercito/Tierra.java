@@ -5,7 +5,7 @@ import java.text.SimpleDateFormat;
 public class Tierra extends Ejercito {
 
 	private int Id;
-	private static int IdSigiente=0;
+	private static int IdSigiente=1;
 	
 	//Constructor
 	public Tierra(String NombreBase, String sede, int numTropas, int numNaves, int dia, int mes, int annio) {
