@@ -1,6 +1,10 @@
 package escritura;
 
 import java.io.* ;
+import java.util.ArrayList;
+import java.util.StringTokenizer;
+
+import ejercito.Armada;
 public class Editor {
 	
 	private String directorio ;
@@ -84,5 +88,41 @@ public class Editor {
 			
 	    
 		
+	}
+	
+	public ArrayList actualizar(ArrayList array) {
+		
+		String linea = null;
+		
+        BufferedReader leerFichero;
+        
+        try {
+        	leerFichero = new BufferedReader (new FileReader(directorio));
+			while( (linea = leerFichero.readLine()) != null)
+			{
+				
+			   StringTokenizer token = new StringTokenizer(linea, "\t");
+			   String     nombreBase =  token.nextToken().trim() ;
+			   String  sede =  token.nextToken().trim();
+			   String       numeroTropas =  token.nextToken().trim();
+			   String     numeroNaves =  token.nextToken().trim();
+			   String     dia =  token.nextToken().trim();
+			   String     mes =  token.nextToken().trim();
+			   String     annio =  token.nextToken().trim();
+			  
+			   
+			   int    numTropas2=Integer.parseInt(numeroTropas);
+			   int    numNaves2=Integer.parseInt(numeroNaves);
+			   int    dia2=Integer.parseInt(numeroNaves);
+			   int    mes2=Integer.parseInt(numeroNaves);
+			   int    annio2=Integer.parseInt(numeroNaves);
+			   array.add(new Armada(nombreBase,sede,numTropas2,numNaves2,dia2,mes2,annio2));
+			   
+			   
+			   }
+		} catch (NumberFormatException | IOException e) {
+			e.printStackTrace();
+		}
+		return array ;
 	}
 }

@@ -19,16 +19,18 @@ public class main {
 		ArrayList<VehiculosTierra>vehiculostierra=new ArrayList<VehiculosTierra>();
 		
 		//editor
-		Editor aire = new Editor("/Users/fernando_cg/Desktop/datos/Aire.txt") ; 
-		Editor armada = new Editor("/Users/fernando_cg/Desktop/datos/Armada.txt") ;
-		Editor tierra = new Editor("/Users/fernando_cg/Desktop/datos/Tierra.txt") ;
-		Editor tropasAire = new Editor("/Users/fernando_cg/Desktop/datos/TropasAire.txt") ;
-		Editor tropasArmada = new Editor("/Users/fernando_cg/Desktop/datos/TropasArmada.txt") ;
-		Editor tropasTierra = new Editor("/Users/fernando_cg/Desktop/datos/TropasTierra.txt") ;
+		Editor aire = new Editor("datos/Aire.txt") ; 
+		Editor armada = new Editor("datos/Armada.txt") ;
+		Editor tierra = new Editor("datos/Tierra.txt") ;
+		Editor tropasAire = new Editor("datos/TropasAire.txt") ;
+		Editor tropasArmada = new Editor("datos/TropasArmada.txt") ;
+		Editor tropasTierra = new Editor("datos/TropasTierra.txt") ;
 		Editor usuarios = new Editor("/Users/fernando_cg/Desktop/datos/Usuarios.txt") ;
 		Editor vehiculosAire = new Editor("/Users/fernando_cg/Desktop/datos/VehiculosAire.txt") ;
 		Editor vehiculosArmada = new Editor("/Users/fernando_cg/Desktop/datos/VehiculosArmada.txt") ;
 		Editor vehiculosTierra = new Editor("/Users/fernando_cg/Desktop/datos/VehiculosTierra.txt") ;
+		
+		armadas = armada.actualizar(armadas) ;
 		
 		Armada arm1=new Armada("Comandancia Naval de Sevilla","", 20838, 203, 17, 2, 1915);
 		Aire air1=new Aire("Cuartel General del Ejército del Aire", "Madrid", 20900, 412, 28,2, 1913);

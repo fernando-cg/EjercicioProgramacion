@@ -25,7 +25,7 @@ public class Armada extends Ejercito {
 		
 		Editor e = new Editor("datos/Armada.txt") ;
 		
-		e.escribir(NombreBase + "\t" + sede + "\t" + numTropas + "\t" + numNaves + "\t" + dia + "\t" + mes + "\t" + annio + "\t" + this.Id + "\t" + this.FechaFundacionArmada);
+		e.escribir(NombreBase + "\t" + sede + "\t" + numTropas + "\t" + numNaves + "\t" + dia + "\t" + mes + "\t" + annio + "\t" + this.Id + "\t" + this.FechaFundacionArmada + "\r\n");
 	
 	}
 
