@@ -12,7 +12,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.*;
 
-import java.applet.AudioClip;
+import javazoom.jlgui.basicplayer.BasicPlayer;
 
 
 @SuppressWarnings({ "serial", "deprecation" })
@@ -186,7 +186,9 @@ public class Marco extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				
-				System.exit(0);
+				
+					 
+					
 			}
 				
 				
