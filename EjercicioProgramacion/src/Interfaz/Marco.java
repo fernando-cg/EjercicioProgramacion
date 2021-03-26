@@ -12,8 +12,10 @@ import java.awt.event.ActionListener;
 
 import javax.swing.*;
 
+import java.applet.AudioClip;
 
-@SuppressWarnings("serial")
+
+@SuppressWarnings({ "serial", "deprecation" })
 public class Marco extends JFrame {
 	
 	private JPanel panel;
@@ -185,7 +187,6 @@ public class Marco extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				
 				System.exit(0);
-					
 			}
 				
 				
