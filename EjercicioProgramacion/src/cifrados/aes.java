@@ -1,3 +1,5 @@
+package cifrados;
+
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -6,7 +8,7 @@ import java.util.Base64;
  
 import javax.crypto.Cipher;
 import javax.crypto.spec.SecretKeySpec;
- 
+ ///bb
 public class aes {
  
     private static SecretKeySpec secretKey;
