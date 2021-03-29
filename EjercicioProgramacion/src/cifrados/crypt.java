@@ -1,6 +1,6 @@
 package cifrados;
 
-
+///cc
 public class crypt {
 
 	public static void main(String[] args) 
