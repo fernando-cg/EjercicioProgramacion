@@ -152,7 +152,7 @@ public void Pregunta10(){
 }
 //Total
 public void getContador() {
-	if (contador >=3) {
+	if (contador >=5) {
 	 JOptionPane.showMessageDialog(null,"Felicidades has aprobado con: "+contador+" Respuestas acertadas");
 
 	}else {
