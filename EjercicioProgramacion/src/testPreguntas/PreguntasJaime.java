@@ -70,62 +70,61 @@ public class PreguntasJaime {
 		}
 		
 		
-		JOptionPane.showMessageDialog(null,"Responde Verdadero o Falso");
-		String p1=JOptionPane.showInputDialog("Cristobal Colón partió desde el Puerto de Palos, en Huelva");
-		if(p1.equalsIgnoreCase("Verdadero")) {
+		respuesta=JOptionPane.showInputDialog("Cristobal Colón partió desde el Puerto de Palos, en Huelva"+"\n¿Verdadero o Falso?");
+		if(respuesta.equalsIgnoreCase("Verdadero")) {
 			JOptionPane.showMessageDialog(null,"Respuesta Correcta");
 			contador++;
 		}
-		else if(p1.equalsIgnoreCase("Falso")){
+		else if(respuesta.equalsIgnoreCase("Falso")){
 			JOptionPane.showMessageDialog(null,"Respuesta Incorrecta");
 		}
 		
 		
-		String p2=JOptionPane.showInputDialog(null,"Madrid fue la primera capital de España");
-		if(p2.equalsIgnoreCase("Verdadero")) {
+		respuesta=JOptionPane.showInputDialog(null,"Madrid fue la primera capital de España"+"\n¿Verdadero o Falso?");
+		if(respuesta.equalsIgnoreCase("Verdadero")) {
 			JOptionPane.showMessageDialog(null,"Respuesta Incorrecta");
 		}
-		else if(p2.equalsIgnoreCase("Falso")){
+		else if(respuesta.equalsIgnoreCase("Falso")){
 			JOptionPane.showMessageDialog(null,"Respuesta Correcta");
 			contador++;
 		}
 		
 		
-		String p3=JOptionPane.showInputDialog(null,"El 17 de Julio de 1936 comenzó la Guerra Civil Española");
-		if(p3.equalsIgnoreCase("Verdadero")) {
+		respuesta=JOptionPane.showInputDialog(null,"El 17 de Julio de 1936 comenzó la Guerra Civil Española"+"\n¿Verdadero o Falso?");
+		if(respuesta.equalsIgnoreCase("Verdadero")) {
 			JOptionPane.showMessageDialog(null,"Respuesta Correcta");
 			contador++;
 		}
-		else if(p3.equalsIgnoreCase("Falso")) {
+		else if(respuesta.equalsIgnoreCase("Falso")) {
 			JOptionPane.showMessageDialog(null,"Respuesta Incorrecta");
 		}
 		
-		String p4=JOptionPane.showInputDialog(null,"Huelva es la ciudad más antigua de España");
+		respuesta=JOptionPane.showInputDialog(null,"Huelva es la ciudad más antigua de España"+"\n¿Verdadero o Falso?");
 		
-		if(p4.equalsIgnoreCase("Verdadero")) {
+		if(respuesta.equalsIgnoreCase("Verdadero")) {
 			JOptionPane.showMessageDialog(null,"Respuesta Incorrecta");
 		}
-		else if(p4.equalsIgnoreCase(p4)) {
+		else if(respuesta.equalsIgnoreCase("Falso")) {
 			JOptionPane.showMessageDialog(null,"Respuesta Correcta");
 			contador++;
 		}
 		
 
-		String p5=JOptionPane.showInputDialog(null,"La catedral de Sevilla es la catedral más grande del mundo");
-		if(p5.equalsIgnoreCase("Verdadero")) {
+		respuesta=JOptionPane.showInputDialog(null,"La catedral de Sevilla es la catedral más grande del mundo"+"\n¿Verdadero o Falso?");
+		if(respuesta.equalsIgnoreCase("Verdadero")) {
 			JOptionPane.showMessageDialog(null,"Respuesta Correcta");
 			contador++;
 		}
-		else if(p5.equalsIgnoreCase("Falso")) {
+		else if(respuesta.equalsIgnoreCase("Falso")) {
 			JOptionPane.showMessageDialog(null,"Respuesta Incorrecta");
 		}
 			
 		
 		if (contador >=3) {
-			JOptionPane.showMessageDialog(null,"Felicidades has aprobado con: "+contador+"Respuestas acertadas");
+			JOptionPane.showMessageDialog(null,"Felicidades has aprobado con: "+contador+" Respuestas acertadas");
 
 		}else {
-			JOptionPane.showMessageDialog(null,"Vaya has Suspendido con: "+contador+"Respuestas acertadas, hay que repasar mas bro");
+			JOptionPane.showMessageDialog(null,"Vaya has Suspendido con: "+contador+" Respuestas acertadas, hay que repasar mas bro");
 		}
 	}
 
