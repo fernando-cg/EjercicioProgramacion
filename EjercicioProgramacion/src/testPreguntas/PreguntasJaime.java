@@ -68,11 +68,63 @@ public class PreguntasJaime {
 			contador=contador+0;
 			JOptionPane.showMessageDialog(null,"Te lo cuento como error");
 		}
+		
+		
+		respuesta=JOptionPane.showInputDialog("Cristobal Colón partió desde el Puerto de Palos, en Huelva"+"\n¿Verdadero o Falso?");
+		if(respuesta.equalsIgnoreCase("Verdadero")) {
+			JOptionPane.showMessageDialog(null,"Respuesta Correcta");
+			contador++;
+		}
+		else if(respuesta.equalsIgnoreCase("Falso")){
+			JOptionPane.showMessageDialog(null,"Respuesta Incorrecta");
+		}
+		
+		
+		respuesta=JOptionPane.showInputDialog(null,"Madrid fue la primera capital de España"+"\n¿Verdadero o Falso?");
+		if(respuesta.equalsIgnoreCase("Verdadero")) {
+			JOptionPane.showMessageDialog(null,"Respuesta Incorrecta");
+		}
+		else if(respuesta.equalsIgnoreCase("Falso")){
+			JOptionPane.showMessageDialog(null,"Respuesta Correcta");
+			contador++;
+		}
+		
+		
+		respuesta=JOptionPane.showInputDialog(null,"El 17 de Julio de 1936 comenzó la Guerra Civil Española"+"\n¿Verdadero o Falso?");
+		if(respuesta.equalsIgnoreCase("Verdadero")) {
+			JOptionPane.showMessageDialog(null,"Respuesta Correcta");
+			contador++;
+		}
+		else if(respuesta.equalsIgnoreCase("Falso")) {
+			JOptionPane.showMessageDialog(null,"Respuesta Incorrecta");
+		}
+		
+		respuesta=JOptionPane.showInputDialog(null,"Huelva es la ciudad más antigua de España"+"\n¿Verdadero o Falso?");
+		
+		if(respuesta.equalsIgnoreCase("Verdadero")) {
+			JOptionPane.showMessageDialog(null,"Respuesta Incorrecta");
+		}
+		else if(respuesta.equalsIgnoreCase("Falso")) {
+			JOptionPane.showMessageDialog(null,"Respuesta Correcta");
+			contador++;
+		}
+		
+
+		respuesta=JOptionPane.showInputDialog(null,"La catedral de Sevilla es la catedral más grande del mundo"+"\n¿Verdadero o Falso?");
+		if(respuesta.equalsIgnoreCase("Verdadero")) {
+			JOptionPane.showMessageDialog(null,"Respuesta Correcta");
+			contador++;
+		}
+		else if(respuesta.equalsIgnoreCase("Falso")) {
+			JOptionPane.showMessageDialog(null,"Respuesta Incorrecta");
+		}
+			
+		
 		if (contador >=3) {
-			JOptionPane.showMessageDialog(null,"Felicidades has aprobado con: "+contador+"Respuestas acertadas");
+			JOptionPane.showMessageDialog(null,"Felicidades has aprobado con: "+contador+" Respuestas acertadas");
 
 		}else {
-			JOptionPane.showMessageDialog(null,"Vaya has Suspendido con: "+contador+"Respuestas acertadas, hay que repasar mas bro");
+			JOptionPane.showMessageDialog(null,"Vaya has Suspendido con: "+contador+" Respuestas acertadas, hay que repasar mas bro");
 		}
 	}
 
