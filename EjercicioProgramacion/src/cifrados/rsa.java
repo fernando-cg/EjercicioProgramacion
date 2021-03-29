@@ -1,3 +1,5 @@
+package cifrados;
+
 import java.security.KeyPair;
 import java.security.KeyPairGenerator;
 import java.security.PrivateKey;
@@ -8,7 +10,7 @@ import javax.crypto.Cipher;
 
 public class rsa
 {
-    static String plainText = "En un lugar de la Mancha, de cuyo nombre no quiero acordarme, no ha mucho tiempo que vivía un hidalgo de los de lanza en astillero, adarga antigua, rocín flaco y galgo corredor.";
+    static String plainText = "En un lugar de la Mancha, de cuyo nombre no quiero acordarme, no ha mucho tiempo que vivï¿½a un hidalgo de los de lanza en astillero, adarga antigua, rocï¿½n flaco y galgo corredor.";
     
     public static void main(String[] args) throws Exception
     {
