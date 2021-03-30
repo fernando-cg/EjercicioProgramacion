@@ -50,7 +50,21 @@ public class main {
 		VehiculosArmada a1= new VehiculosArmada(5, "Fragatas","La fragata es un buque de guerra concebido para actuar en misiones de guerra naval y antisubmarina, aunque puede disponer de sistemas para actuar como buque de apoyo en otras misiones. ");
 		TropasAire tair1= new TropasAire(9500, "Oficiales", "Base Aerea de Moron");
 		VehiculosAire va1=new VehiculosAire(73, "Eurofighter Typhoon","El Eurofighter Typhoon es un caza polivalente, bimotor y de gran maniobrabilidad, diseñado y construido por el consorcio de empresas europeas Eurofighter GmbH creado en 1983 y compuesto por las compañías Airbus, BAE Systems y Alenia Aeronautica.​");
-
+		System.out.println(arm1.toString());
+		System.out.println("");
+		System.out.println(tier1.toString());
+		System.out.println("");
+		System.out.println(tt1.toString());
+		System.out.println("");
+		System.out.println(vt1.toString());
+		System.out.println("");
+		System.out.println(ta1.toString());
+		System.out.println("");
+		System.out.println(a1.toString());
+		System.out.println("");
+		System.out.println(tair1.toString());
+		System.out.println("");
+		System.out.println(va1.toString());
 
 		
 	}
