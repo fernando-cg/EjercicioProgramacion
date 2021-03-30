@@ -15,8 +15,8 @@ public class VehiculosTierra extends Vehiculo{
 	
 	@Override
 	public String toString() {
-		return "VehiculosAire Cantidad: " + getCantVehiculos() + "|Tipo" + getTipo()
-				+ "|Presupuesto=" + getPresupuesto()+"|Descripción del vehículo: "+getDescripcion();
+		return "-Nombre:" + getTipo()+"\n-Cantidad: " + getCantVehiculos() +
+				 "\n-Descripción del vehículo: "+getDescripcion();
 	}
 
 }
