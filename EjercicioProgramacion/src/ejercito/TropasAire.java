@@ -15,8 +15,8 @@ public class TropasAire extends Tropa {
 	
 	@Override
 	public String toString() {
-		return "|Cantidad de tropas=" + getCantTropas() + "\t|Presupuesto: " + getCantPresupuesto()
-				+ "\t|Rango: " + getRango() + "\t|Base: " + getBase();
+		return "\n|Cantidad de tropas=" + getCantTropas() + "\n|Presupuesto: " + getCantPresupuesto()
+				+ "\n|Rango: " + getRango() + "\n|Base: " + getBase();
 	}
 
 
