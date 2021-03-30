@@ -10,6 +10,7 @@ public Vehiculo(int cantVehiculos, String tipo,String descripcion) {
 	super();
 	this.cantVehiculos = cantVehiculos;
 	Tipo = tipo;
+	this.descripcion=descripcion;
 	
 }
 //Getters y setters
