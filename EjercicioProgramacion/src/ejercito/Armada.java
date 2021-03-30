@@ -32,7 +32,7 @@ public class Armada extends Ejercito {
 	@Override
 	public String toString() {
 		SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyy");
-		return "Armada Id=" + Id + "|Nombre de la base: "+getNombreBase()+"|Lugar de la sede: "+getSede()+"|Número de tropas: "+getNumTropas()+"|Número de naves: "+getNumNaves() +"|Fecha de fundación de la Armada:  "+formatter.format(FechaFundacionArmada);
+		return "-Id_Armada=" + Id + "\n-Nombre de la base: "+getNombreBase()+"\n-Lugar de la sede: "+getSede()+"\n-Número de tropas: "+getNumTropas()+"\n-Número de naves: "+getNumNaves() +"\n-Fecha de fundación de la Armada:  "+formatter.format(getFechaFundacion());
 	}
 	
 	
