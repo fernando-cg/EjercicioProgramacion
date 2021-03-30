@@ -118,7 +118,7 @@ public class mAire extends JFrame{
 				
 				Marco m1 = new Marco();		
 				m1.setVisible(true);
-				m1.setTitle("Ejército de España");
+				m1.setTitle("Ejercito de Espa�a");
 				m1.setResizable(false);
 				m1.setExtendedState(Frame.MAXIMIZED_BOTH);
 					

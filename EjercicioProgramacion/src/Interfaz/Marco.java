@@ -12,7 +12,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.*;
 
-import javazoom.jlgui.basicplayer.BasicPlayer;
+
 
 
 @SuppressWarnings({ "serial", "deprecation" })
@@ -62,7 +62,7 @@ public class Marco extends JFrame {
 		panel.add(fondo);
 	}
 	private void colocarEtiqueta() {
-		etiqueta = new JLabel("Escoja el ejército que quiere ver");
+		etiqueta = new JLabel("Escoja el ejercito que quiere ver");
 		etiqueta.setBounds((anchuraM/2)+ anchuraM/8, alturaM/50, 400, 100);
 		
 		etiqueta.setFont(new Font("Arial", 1, 20));
@@ -185,7 +185,7 @@ public class Marco extends JFrame {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				
+				System.exit(0);
 				
 					 
 					
