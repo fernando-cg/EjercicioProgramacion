@@ -5,7 +5,9 @@ private int cantVehiculos;
 private String Tipo;
 private int Presupuesto;
 private String descripcion;
+
 //Constructor
+
 public Vehiculo(int cantVehiculos, String tipo,String descripcion) {
 	super();
 	this.cantVehiculos = cantVehiculos;

@@ -6,11 +6,14 @@ public class TropasTierra extends Tropa {
 
 	public TropasTierra(int cantTropas,  String rango, String base) {
 		super(cantTropas, rango, base);
-		// TODO Auto-generated constructor stub
 		
 		Editor e = new Editor("datos/TropasTierra.txt") ;
 		
 		e.escribir(cantTropas + "\t" + rango + "\t" + base + "\t" + getCantPresupuesto() +"\r\n");
+	}
+	
+	public TropasTierra(int cantTropas,  String rango, String base,int presupuesto) {
+		super(cantTropas, rango, base,presupuesto);
 	}
 
 	@Override

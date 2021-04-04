@@ -11,22 +11,25 @@ public class Armada extends Ejercito {
 
 	private int Id;
 	private static int IdSigiente=1;
-	private Date FechaFundacionArmada;
 	
 	//Constructor
 	public Armada(String NombreBase, String sede, int numTropas, int numNaves, int dia, int mes, int annio) {
 		super(NombreBase, sede, numTropas, numNaves, dia, mes, annio);
 		Id=IdSigiente;
-		IdSigiente++;
-		
-		Calendar cal=Calendar.getInstance();
-		cal.set(annio, (mes-1),dia);
-		this.FechaFundacionArmada=cal.getTime();
+		IdSigiente++ ;
 		
 		Editor e = new Editor("datos/Armada.txt") ;
 		
-		e.escribir(NombreBase + "\t" + sede + "\t" + numTropas + "\t" + numNaves + "\t" + dia + "\t" + mes + "\t" + annio + "\t" + this.Id + "\t" + this.FechaFundacionArmada + "\r\n");
+		e.escribir(NombreBase + "\t" + sede + "\t" + numTropas + "\t" + numNaves + "\t" + dia + "\t" + mes + "\t" + annio + "\t" + this.Id + "\r\n");
 	
+	}
+	public Armada(String NombreBase, String sede, int numTropas, int numNaves, int dia, int mes, int annio,int id) {
+		super(NombreBase, sede, numTropas, numNaves, dia, mes, annio);
+		
+		Id=id;
+		IdSigiente = id+1 ;
+		
+		
 	}
 
 	@Override

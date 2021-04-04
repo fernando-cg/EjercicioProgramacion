@@ -13,6 +13,14 @@ public class Tropa {
 		this.rango = rango;
 		this.base = base;
 	}
+	
+	public Tropa(int cantTropas,  String rango, String base,int cantPresupuesto) {
+		super();
+		this.cantTropas = cantTropas;
+		this.rango = rango;
+		this.base = base;
+		this.cantPresupuesto = cantPresupuesto;
+	}
 
 	public int getCantTropas() {
 		return cantTropas;
