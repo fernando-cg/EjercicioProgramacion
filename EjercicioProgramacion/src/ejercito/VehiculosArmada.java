@@ -3,7 +3,8 @@ package ejercito;
 import escritura.Editor;
 
 public class VehiculosArmada extends Vehiculo {
-
+	
+	
 	public VehiculosArmada(int cantVehiculos, String tipo,String descripcion) {
 		super(cantVehiculos, tipo,descripcion);
 		Editor e = new Editor("datos/VehiculosArmada.txt") ;
