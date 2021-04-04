@@ -21,7 +21,7 @@ import javax.swing.JTextField;
 public class mArmada extends JFrame{
 	private JPanel panel;
 	private JLabel etiqueta, fondo, imagen;
-	private JButton bt1, bt2, egg;
+	private JButton bt1, bt2, egg,bt3;
 	private JTextField tb1, tb2;
 	Toolkit monitor = Toolkit.getDefaultToolkit();
 	Dimension tamanio=monitor.getScreenSize();
@@ -88,7 +88,7 @@ public class mArmada extends JFrame{
 		ImageIcon imgTierra = new ImageIcon(getClass().getResource("/Imagenes/Armada.png"));
 		imagen.setIcon(new ImageIcon(imgTierra.getImage().getScaledInstance(anchuraM/6,alturaM/5,Image.SCALE_SMOOTH)));
 		panel.add(imagen);
-		imagen.setBounds((int) ((anchuraM/2)+ anchuraM/4.55),alturaM/9,anchuraM/6,alturaM/5);
+		imagen.setBounds((int) ((anchuraM/2)+ anchuraM/4.55),alturaM/12,anchuraM/6,alturaM/5);
 		
 		tb1 = new JTextField("Usuario");
 		panel.add(tb1);
@@ -109,6 +109,11 @@ public class mArmada extends JFrame{
 		egg = new JButton("EasterEgg");
 		panel.add(egg);
 		egg.setBounds((int) ((anchuraM/2)+ anchuraM/4.45),(int) (alturaM/2.25), 140, 40);
+		//Añadir boton jfg
+		bt3 = new JButton("Ver Informacion Basica");
+		panel.add(bt3);
+		bt3.setBounds((int) ((anchuraM/2.2)+ anchuraM/4.45),(int) (alturaM/3.5), 200, 40);
+		
 		
 		ActionListener eventoClic1 = new ActionListener() {
 
@@ -158,6 +163,23 @@ public class mArmada extends JFrame{
 				
 		};
 		egg.addActionListener(eventoClic2);
+		
+		ActionListener eventoClic3 = new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				//Accion boton armada datos
+				DB_Armada m1 = new DB_Armada();		
+				m1.setVisible(true);
+				m1.setTitle("Datos basicos de la Armada");
+				m1.setResizable(false);
+				m1.setExtendedState(Frame.MAXIMIZED_BOTH);
+					
+			}
+				
+				
+		};
+		bt3.addActionListener(eventoClic3);
 		
 
 		

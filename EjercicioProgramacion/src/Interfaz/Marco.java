@@ -20,7 +20,7 @@ public class Marco extends JFrame {
 	
 	private JPanel panel;
 	private JLabel etiqueta, fondo;
-	private JButton img1, img2, img3, bt2;
+	private JButton img1, img2, img3, bt2,bt3;
 	Toolkit monitor = Toolkit.getDefaultToolkit();
 	Dimension tamanio=monitor.getScreenSize();
 	int alturaM = tamanio.width;
@@ -122,6 +122,11 @@ public class Marco extends JFrame {
 		img3.setContentAreaFilled(false);
 		img3.setBorderPainted(false);
 		panel.add(img3);
+		//Boton creado
+		bt3 = new JButton("TEST");
+		panel.add(bt3);
+		bt3.setBounds((int) ((anchuraM/0.85)+ anchuraM/4.45),alturaM/2, 140, 40);
+		//Fin del boton creado
 		
 		ActionListener eventoClic = new ActionListener() {
 
@@ -190,21 +195,42 @@ public class Marco extends JFrame {
 					 
 					
 			}
+			
 				
 				
 		};
 		bt2.addActionListener(eventoClic4);
 		
-		
 
-		
-		
-		
+	
+	
+//Cambio realizado para el boton del test			
+		ActionListener eventoClic5 = new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				Test test =new Test();
+				test.Pregunta1();
+				test.Pregunta2();
+				test.Pregunta3();
+				test.Pregunta4();
+				test.Pregunta5();
+				test.Pregunta6();
+				test.Pregunta7();
+				test.Pregunta8();
+				test.Pregunta9();
+				test.Pregunta10();
+				test.getContador();
+
+				
+					
+			}
+				
+				
+		};
+		bt3.addActionListener(eventoClic5);
 	}
-	
-	
-	
-	
-	
+	//Fin de mi cambio
 
 }

@@ -22,7 +22,7 @@ public class mTierra extends JFrame{
 	
 	private JPanel panel;
 	private JLabel etiqueta, fondo, imagen;
-	private JButton bt1, bt2;
+	private JButton bt1, bt2,bt3;
 	private JTextField tb1, tb2;
 	Toolkit monitor = Toolkit.getDefaultToolkit();
 	Dimension tamanio=monitor.getScreenSize();
@@ -112,6 +112,10 @@ public class mTierra extends JFrame{
 		panel.add(bt2);
 		bt2.setBounds((int) ((anchuraM/2)+ anchuraM/4.45),alturaM/2, 140, 40);
 		
+		bt3 = new JButton("Ver Informacion Basica");
+		panel.add(bt3);
+		bt3.setBounds((int) ((anchuraM/2.2)+ anchuraM/4.45),(int) (alturaM/3.5), 200, 40);
+		
 		ActionListener eventoClic = new ActionListener() {
 
 			@Override
@@ -130,11 +134,22 @@ public class mTierra extends JFrame{
 		bt2.addActionListener(eventoClic);
 		
 
-		
+		ActionListener eventoClic2 = new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				DB_Tierra m2 = new DB_Tierra();		
+				m2.setVisible(true);
+				m2.setTitle("Ejercito de Espa�a");
+				m2.setResizable(false);
+				m2.setExtendedState(Frame.MAXIMIZED_BOTH);
+					
+			}
+	};
+	bt3.addActionListener(eventoClic2);
+
+	
 	}
-	
-
-
-	
 	
 }
