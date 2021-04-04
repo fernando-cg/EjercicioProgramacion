@@ -13,6 +13,11 @@ public class VehiculosTierra extends Vehiculo{
 		e.escribir(cantVehiculos + "\t" + tipo + "\t" + descripcion +"\r\n");
 	}
 	
+	public VehiculosTierra(int cantVehiculos, String tipo,String descripcion,boolean registro) {
+		super(cantVehiculos, tipo,descripcion,registro);
+		
+	}
+	
 	@Override
 	public String toString() {
 		return "-Nombre:" + getTipo()+"\n-Cantidad: " + getCantVehiculos() +

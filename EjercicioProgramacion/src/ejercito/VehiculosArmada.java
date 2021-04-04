@@ -9,7 +9,12 @@ public class VehiculosArmada extends Vehiculo {
 		super(cantVehiculos, tipo,descripcion);
 		Editor e = new Editor("datos/VehiculosArmada.txt") ;
 		
-		e.escribir(cantVehiculos + "\t" + tipo + "\t" + descripcion +"\r\n");
+		e.escribir(cantVehiculos + "\t" + tipo + "\t" + descripcion + "\t" + getRegistro() + "\r\n");
+	}
+	
+	public VehiculosArmada(int cantVehiculos, String tipo,String descripcion,boolean registro) {
+		super(cantVehiculos, tipo,descripcion,registro);
+		
 	}
 
 	@Override

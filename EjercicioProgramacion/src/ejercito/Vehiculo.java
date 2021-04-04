@@ -5,6 +5,7 @@ private int cantVehiculos;
 private String Tipo;
 private int Presupuesto;
 private String descripcion;
+private boolean registro ;
 
 //Constructor
 
@@ -13,6 +14,15 @@ public Vehiculo(int cantVehiculos, String tipo,String descripcion) {
 	this.cantVehiculos = cantVehiculos;
 	Tipo = tipo;
 	this.descripcion=descripcion;
+	registro =false ;
+	
+}
+public Vehiculo(int cantVehiculos, String tipo,String descripcion,boolean registro) {
+	super();
+	this.cantVehiculos = cantVehiculos;
+	Tipo = tipo;
+	this.descripcion=descripcion;
+	this.registro = registro ;
 	
 }
 //Getters y setters
@@ -39,6 +49,12 @@ public String getDescripcion() {
 }
 public void setDescripcion(String descripcion) {
 	this.descripcion = descripcion;
+}
+public boolean getRegistro() {
+	return registro;
+}
+public void setRegistro(boolean registro) {
+	this.registro = registro;
 }
 
 

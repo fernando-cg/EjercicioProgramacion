@@ -326,17 +326,19 @@ public ArrayList<VehiculosArmada> actualizarvehiarm(ArrayList<VehiculosArmada> a
 		while( (linea = leerFichero.readLine()) != null)
 		{
 			
-		   StringTokenizer token = new StringTokenizer(linea, "\t");
-		   
-		   String     cantVehiculos =  token.nextToken().trim() ;
-		   String  tipo =  token.nextToken().trim();
-		   String       descripcion =  token.nextToken().trim();
-		  
-		  
-		   
-		   int    cantVehiculos2=Integer.parseInt(cantVehiculos);
-		   
-		   array.add(new VehiculosArmada(cantVehiculos2,tipo,descripcion));
+			   StringTokenizer token = new StringTokenizer(linea, "\t");
+			   
+			   String     cantVehiculos =  token.nextToken().trim() ;
+			   String  tipo =  token.nextToken().trim();
+			   String       descripcion =  token.nextToken().trim();
+			   String       tipo1 =  token.nextToken().trim();
+			  
+			  
+			   
+			   int    cantVehiculos2=Integer.parseInt(cantVehiculos);
+			   boolean    tipo2=Boolean.parseBoolean(tipo1) ;
+			   
+			   array.add(new VehiculosArmada(cantVehiculos2,tipo,descripcion,tipo2));
 		   
 		   
 		   }
@@ -363,12 +365,14 @@ public ArrayList<VehiculosAire> actualizarvehiair(ArrayList<VehiculosAire> array
 		   String     cantVehiculos =  token.nextToken().trim() ;
 		   String  tipo =  token.nextToken().trim();
 		   String       descripcion =  token.nextToken().trim();
+		   String       tipo1 =  token.nextToken().trim();
 		  
 		  
 		   
 		   int    cantVehiculos2=Integer.parseInt(cantVehiculos);
+		   boolean    tipo2=Boolean.parseBoolean(tipo1) ;
 		   
-		   array.add(new VehiculosAire(cantVehiculos2,tipo,descripcion));
+		   array.add(new VehiculosAire(cantVehiculos2,tipo,descripcion,tipo2));
 		   
 		   
 		   }
@@ -390,17 +394,19 @@ public ArrayList<VehiculosTierra> actualizarvehitier(ArrayList<VehiculosTierra> 
 		while( (linea = leerFichero.readLine()) != null)
 		{
 			
-		   StringTokenizer token = new StringTokenizer(linea, "\t");
-		   
-		   String     cantVehiculos =  token.nextToken().trim() ;
-		   String  tipo =  token.nextToken().trim();
-		   String       descripcion =  token.nextToken().trim();
-		  
-		  
-		   
-		   int    cantVehiculos2=Integer.parseInt(cantVehiculos);
-		   
-		   array.add(new VehiculosTierra(cantVehiculos2,tipo,descripcion));
+			   StringTokenizer token = new StringTokenizer(linea, "\t");
+			   
+			   String     cantVehiculos =  token.nextToken().trim() ;
+			   String  tipo =  token.nextToken().trim();
+			   String       descripcion =  token.nextToken().trim();
+			   String       tipo1 =  token.nextToken().trim();
+			  
+			  
+			   
+			   int    cantVehiculos2=Integer.parseInt(cantVehiculos);
+			   boolean    tipo2=Boolean.parseBoolean(tipo1) ;
+			   
+			   array.add(new VehiculosTierra(cantVehiculos2,tipo,descripcion,tipo2));
 		   
 		   
 		   }

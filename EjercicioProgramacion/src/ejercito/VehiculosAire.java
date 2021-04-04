@@ -10,7 +10,12 @@ public class VehiculosAire extends Vehiculo {
 		
 		Editor e = new Editor("datos/VehiculosAire.txt") ;
 		
-		e.escribir(cantVehiculos + "\t" + tipo + "\t" + descripcion +"\r\n");
+		e.escribir(cantVehiculos + "\t" + tipo + "\t" + descripcion + "\t" + getRegistro() +"\r\n");
+	}
+	
+	public VehiculosAire(int cantVehiculos, String tipo,String descripcion,boolean registro) {
+		super(cantVehiculos, tipo,descripcion,registro);
+		
 	}
 	
 	@Override
