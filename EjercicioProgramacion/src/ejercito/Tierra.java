@@ -15,11 +15,18 @@ public class Tierra extends Ejercito {
 		Id=IdSigiente;
 		IdSigiente++;
 		
-Editor e = new Editor("datos/Tierra.txt") ;
+		Editor e = new Editor("datos/Tierra.txt") ;
 		
-		e.escribir(NombreBase + "\t" + sede + "\t" + numTropas + "\t" + numNaves + "\t" + dia + "\t" + mes + "\t" + annio + "\t" + this.Id+ "\t"+ getFechaFundacion()+"\r\n");
+		e.escribir(NombreBase + "\t" + sede + "\t" + numTropas + "\t" + numNaves + "\t" + dia + "\t" + mes + "\t" + annio + "\t" + this.Id + "\r\n");
 	}
 	
+	public Tierra(String NombreBase, String sede, int numTropas, int numNaves, int dia, int mes, int annio, int id) {
+		super(NombreBase, sede, numTropas, numNaves, dia, mes, annio);
+		
+		Id=id;
+		IdSigiente = id + 1;
+		
+	}
 	@Override
 	public String toString() {
 		SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyy");
